@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<title>JMOLL|Clothing|website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-to1p:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+//Slide show styles
+img {
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #cccccc;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+//Horizontal line resize
+.hori{
+    size: 30px;
+}
+/* Large rounded green border */
+hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+}
+hr.new6 {
+  border: 10px solid tomato;
+  border-radius: 3px;
+}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><img src="J-Moll logo.jpg" style="width:40%;height: 32%;"><br><b>J MOLL</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="http://localhost:8383/closthing/Jmoll%20brand/index.html" class="w3-button w3-block w3-left-align btn active">HOMEPAGE</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+      CLOTHING <i class="fa fa-caret-down"></i>
+    </a>
+        <div id="myBtn" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/t-shirt.html" class="w3-bar-item w3-button">T-shirt</a>
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/Tracksuit.html" class="w3-bar-item w3-button">Tracksuit</a>
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/Shorts.html" class="w3-bar-item w3-button">Shorts</a>
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/Jackets.html" class="w3-bar-item w3-button">Jackets</a>
+        </div>
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+      BRANDS <i class="fa fa-caret-down"></i>
+    </a>
+        <div id="myBtn1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/J%20moll.html" class="w3-bar-item w3-button">J MOLL</a>
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/Cage.html" class="w3-bar-item w3-button">CAGE</a>
+          <a href="http://localhost:8383/closthing/Jmoll%20brand/Jay%20Team.html" class="w3-bar-item w3-button">JAY TEAM</a>
+        </div>
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+      ACCESSORIES <i class="fa fa-caret-down"></i>
+    </a>
+        <div id="myBtn2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+            Styles <i class="fa fa-caret-down"></i>
+          </a>
+            <div id="myBtn3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                <a href="http://localhost:8383/closthing/Jmoll%20brand/Backpack.html" class="w3-bar-item w3-button">Backpacks</a>
+                <a href="http://localhost:8383/closthing/Jmoll%20brand/Watches.html" class="w3-bar-item w3-button">Watches</a>
+                <a href="http://localhost:8383/closthing/Jmoll%20brand/Cap.html" class="w3-bar-item w3-button">Caps</a>
+            </div>
+        </div>
+  </div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('contact').style.display='block'">CONTACT</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('aboutus').style.display='block'">ABOUT US</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">NEWSLETTER</a> 
+  <a href="#subscribe"  class="w3-bar-item w3-button w3-padding">SUBSCRIBE</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">JMOLL BRAND</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+    <!--Top Header -->
+    <div class="w3-container" style="margin-top:80px" id="view">
+        <h2 class="w3-jumbo"><b>J MOLL, CAGE & JAY TEAM BRANDS</b></h2>
+        <hr style="width:100%;border:2px solid blue" class="w3-round">
+    </div>
+<!-- Slideshow --> 
+    <div class="container">
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>1 / 8</b></div>
+    <img src="Jmoll Tracksuit.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Jmoll Tracksuit">
+  </div>
+        
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>2 / 8</b></div>
+    <img src="Jmoll golf t-shirt.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Jmoll golf t-shirt">
+  </div>
+    
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>3 / 8</b></div>
+    <img src="Jmoll Cap and bag.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Jmoll Cap and bag" >
+  </div>
+   
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>4 / 8</b></div>
+    <img src="Orange Jmoll t-shirt.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Orange Jmoll t-shirt">
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>5 / 8</b></div>
+    <img src="IMG-20190913-WA0013.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Thato on bed thinking">
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>6 / 8</b></div>
+    <img src="Bag and cap.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Bag and cap">
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>7 / 8</b></div>
+    <img src="IMG-20190913-WA0022.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="J MOLL grey stylish t-shirt">
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext" style="color:blue"><b>8 / 8</b></div>
+    <img src="Jmoll Jacket.jpg" style="width:100%;height:500px;border-radius: 6px;" onclick="onClick(this)" alt="Jmoll Jacket">
+  </div>
+        <a class="prev" style="background-color:blue" onclick="plusSlides(-1)">❮</a>
+         <a class="next" style="background-color:blue" onclick="plusSlides(1)">❯</a>
+
+</div>
+    <br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+ 
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+  <script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+  <script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+function plusSlides(n) {
+  showSlides2(slideIndex += n);
+}
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1;}
+  if (n < 1) {slideIndex = slides.length;}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  
+
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+      <h3 class="w3-center"><b>What's in our store</b></h3>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="014.jpg" alt="014" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small" style="color:blue">New arrivals</h1>
+      <h1 class="w3-hide-large w3-hide-medium" style="color:blue">New arrivals brand on the way</h1>
+      <h1 class="w3-hide-small" style="color:blue">COLLECTION 2019</h1>
+      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">VIEW</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p style="color:blue">8 items for examples, come and store with us now!</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <img src="IMG-20190913-WA0022.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL t-shirt<br><b>R100.00</b>">
+        <p>J MOLL t-shirt<br><b>R100.00</b></p>
+      </div>
+      <div class="w3-container">
+          <img src="IMG-20190913-WA0005.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL sets<br><b>R1 100.00</b>">
+        <p>J MOLL sets<br><b>R1 100.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="Tshirt.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL plain t-shirt<br><b>R105.00</b>">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>J MOLL plain t-shirt<br><b>R105.00</b></p>
+      </div>
+      <div class="w3-container">
+          <img src="IMG-20190913-WA0013.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL cap & golf t-shirt<br><b>R260.00</b>">
+        <p>J MOLL cap & golf t-shirt<br><b>R260.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <img src="Jmoll t-shirt.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL plain t-shirt<br><b>R105.00</b>">
+        <p>J MOLL plain t-shirt<br><b>R105.00</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+            <img src="Jmoll Cap and bag.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="J MOLL Bag & Cap<br><b>R370.00</b>">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>J MOLL Bag & Cap<br><b>R370.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <img src="IMG-20190913-WA0018.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="CAGE t-shirt<br><b>R100.00</b>">
+        <p>CAGE t-shirt<br><b>R100.00</b></p>
+      </div>
+      <div class="w3-container">
+          <img src="Bag and cap.jpg" style="width:100%;height:300px" onclick="onClick(this)" alt="JAY TEAM Bag & J MOLL Straight Cap<br><b>R350.00</b>">
+        <p>JAY TEAM Bag & J MOLL Straight Cap<br><b>R350.00</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32" id="subscribe">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <form action="https://formspree.io/solomaboya@gmail.com" method="post">
+        <p><input class="w3-input w3-border" type="text" name="subscribe" placeholder="Enter e-mail" required style="width:100%"></p>
+    <button type="submit" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    </form>
+  </div>
+  
+  <!-- Footer -->
+    <div class="w3-grey w3-center w3-padding-24">&copy; 2019 J MOLL. All rights reserved by <a href="https://thato-maboya.github.io/ts_expertisewebsitebuilder/" title="TS_EXPERTISE" target="_blank" class="w3-hover-opacity">TS_EXPERTISE COMPANY</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <form action="https://formspree.io/solomaboya@gmail.com" method="post">
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" name="newsletter" required></p>
+      <button type="submit" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('').style.display='none'">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--About Us -->
+<div id="aboutus" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('aboutus').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide w3-center"><b>ABOUT US</b></h2>
+      <div class="w3-container w3-white w3-center">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="Jappe.jpg" style="width:70%;height:300px" onclick="onClick(this)">
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-black">View Image <i class="fa fa-shopping-cart"></i></button>
+              </div>
+            </div>
+            <p>J MOLL Designer: <b>Wesley Jay Moloto</b></p>
+          </div>
+      </div>
+      <p>With the humble beginnings of a single store around Limpopo in polokwane J MOLL opened by Wesley Jay Moloto, J Moll is still under 
+         development and growth from strength-to-strength to become synonymous with the excellence of the exclusive international brands it offers 
+         in store. J Moll is a brand that was started around 2017</p>
+      <p>Each of the J Moll brands or stores aims to successfully deliver its brand all around the country, since it has been designed to be an inviting place for customers to not only have access to top 
+          quality exclusive International clothes brands, but also a memorable shopping experience that will keep them coming back for more.</p>
+      <p>With a brand built on great relationships, trustworthiness and outstanding quality, J Moll has continually managed to establish, and nurture, a loyalty with its customers that has been handed down 
+          from generation to generation.</p>
+      <p>J Moll empowers all those who wear its brands to exude confidence, no matter whether they’re at home or waltzing down the red carpet. Known for selling desirable, premium quality brands, 
+          J Moll is the aspirational clothes retailer of choice.</p>
+      <br>
+      <p>Now a highly-trusted brand in the industry, J Moll combines the finest raw materials and production methods with cutting edge design, to bring you high-quality, fashionable clothes, bags, watches and caps that won’t hurt your back.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact details Modal-->
+<div id="contact" class="w3-modal">
+ <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('contact').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>  
+    <h1>Contact Details</h1><br>
+    <h3>You can follow us on:</h3>
+    <div class="col-md-3 col-sm-3 hidden-xs header-social-icons">
+          <!-- Facebook, Instagram & twitter row--> 
+            <div>
+                <ul>
+                    <i class="fa fa-facebook-square" style="font-size:48px;color:blue"></i>
+                    <i class="fa fa-instagram" style="font-size:48px;color:red"></i>
+                    <i class="fa fa-twitter-square" style="font-size:48px;color:blue"></i>
+                    <i class="fa fa-whatsapp" style="font-size:48px;color:greenyellow"></i>
+                    <i class="fa fa-linkedin-square" style="font-size:48px;color:blue"></i>
+                </ul>
+            </div>        
+        </div>
+    <div class="contact-item">
+                  <div class="ci-title font-alt w3-text-red" style=" text-align: center;"><h3>G MOLL Locator</h3></div>
+                         <div class="ci-title font-alt" style="color: black; text-align: center;">
+                             <div class="ci-text" style="text-align: center;">
+                                 Location: Polokwane, Moletjie (Ga Kobo) and anywhere next to PLK<br>
+				
+                                <br>
+				<b>Save our #.<br>Chat / Message / Voice Note / Data Call / Phone</b>
+                                <br>
+                                <i class="fa fa-whatsapp" style="font-size:28px;color:greenyellow"></i><b>+27 (0) 79 392 1369</b>
+                                <br>
+				<b>Weekdays: </b>08h00-12h30 / 14h00-16h00
+                                <br>
+                                <b>Weekends & holidays: </b>08h00-13h30 
+                                <br>
+                                <i class="fa fa-envelope" style="font-size:28px;color:red"></i><b>solomaboya@gmail.com</b>
+                              </div>
+                         </div>
+                    </div>
+    <p>We offer full-service attention to our customer. We understand your needs and we will do anything to satisfy the biggest criteria of them all, both look and design. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>You can send us a message here:</b></p>
+    <p><b>NB:</b> Don't forget to subscribe</p>
+    <form action="https://formspree.io/solomaboya@gmail.com" method="post">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Enter your name" required name="name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="Enter your phone number" required name="contact"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-green w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("myBtn");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function myAccFunc1() {
+  var x = document.getElementById("myBtn1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function myAccFunc2() {
+  var x = document.getElementById("myBtn2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function myAccFunc3() {
+  var x = document.getElementById("myBtn3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("demoAcc").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
